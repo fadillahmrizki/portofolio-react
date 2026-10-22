@@ -68,7 +68,8 @@ export default function Hero() {
                     <div className="shrink-0 flex justify-center items-center">
                         {photoUrl ? (
                             <img
-                                src={photoUrl}
+                                // src={photoUrl}
+                                src="/inpo_sepuh.png"
                                 alt="Foto Profil"
                                 className="w-48 h-48 md:w-60 md:h-60 lg:w-64 lg:h-64 rounded-2xl object-cover shadow-md border-4 border-slate-100 dark:border-slate-800"
                             />
