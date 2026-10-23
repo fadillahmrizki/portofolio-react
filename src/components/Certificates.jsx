@@ -132,7 +132,7 @@ export default function Certificates() {
             {/* JUDUL BAGIAN SERTIFIKAT (Rata Tengah & Font Lebih Besar) */}
             <div className="text-center">
                 <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-                    Prestasi & Sertifikasi
+                    Prestasi & Sertifikat
                 </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

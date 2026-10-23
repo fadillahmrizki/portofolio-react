@@ -24,25 +24,24 @@ export default function Hero() {
                     <div className="space-y-4 max-w-2xl flex-1 text-left">
                         <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-slate-700 rounded-full text-xs font-semibold">
                             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                            Senior Consultan Data & Design
+                            Open for Internship / Junior Roles
                         </div>
 
                         <div>
-                            <h1 className="text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-2">
+                            {/* <h1 className="text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-2">
                                 Prof. Ir. Mhd. Rizky Fadillah, S. Gem. AI, C.V.I.M., C. EI., Ph.D (Eng.)
+                            </h1> */}
+                            <h1 className="text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-2">
+                                Mhd. Rizky Fadillah S
                             </h1>
                             <p className="text-lg md:text-xl font-semibold text-slate-600 dark:text-slate-400">
-                                Data Science & Frontend Developer
+                                AI & Data Scientist Enthusiast | Frontend & Graphic Designer
                             </p>
                         </div>
 
                         <p className="text-slate-600 dark:text-slate-300 text-sm md:text-base leading-relaxed">
-                            Senior di bidang AI, Data Science, Design Enginering, Senior Consultan. Berpengalaman dalam pengembangan solusi berbasis data dan teknologi informasi, juga sudah terlibat dalam berbagai proyek AI, Data Science, Desain Grafis, juga juru bicara untuk Methodist Binjai.
+                            Mahasiswa Sistem Informasi & Google Student Ambassador 2026 yang berfokus di bidang AI, Data Science, dan Frontend Web Development. Memiliki latar belakang kuat dalam desain grafis (Adobe Photoshop & Illustrator), memungkinkan saya membangun solusi berbasis data yang tidak hanya fungsional, tetapi juga memiliki visual antarmuka yang menarik dan intuitif.
                         </p>
-
-                        {/* <p className="text-slate-600 dark:text-slate-300 text-sm md:text-base leading-relaxed">
-                            Mahasiswa Semester 7 yang memadukan kekuatan analisis data, pemodelan Machine Learning, serta eksekusi antarmuka web (UI/UX) yang rapi, cepat, dan interaktif.
-                        </p> */}
 
                         <div className="flex flex-wrap items-center gap-3 pt-2">
                             <a href="#proyek" className="px-6 py-3 bg-[#0080FF] hover:bg-[#0066cc] active:scale-95 text-white font-medium text-sm rounded-xl transition shadow-sm">

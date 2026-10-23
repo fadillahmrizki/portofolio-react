@@ -46,7 +46,7 @@ export default function Timeline() {
             {/* Education Timeline */}
             <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 hover:-translate-y-1 hover:shadow-md transition-all duration-200">
                 <h3 className="font-bold text-base text-slate-900 dark:text-white mb-6 flex items-center gap-2">
-                    <span>🎓</span> Riwayat Pendidikan
+                    Riwayat Pendidikan
                 </h3>
                 <div className="relative border-s-2 border-slate-200 dark:border-slate-800 ml-3 space-y-6">
                     {educationData.map((edu) => (
@@ -70,7 +70,7 @@ export default function Timeline() {
             <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between hover:-translate-y-1 hover:shadow-md transition-all duration-200">
                 <div>
                     <h3 className="font-bold text-base text-slate-900 dark:text-white mb-6 flex items-center gap-2">
-                        <span>👥</span> Pengalaman Organisasi
+                        Pengalaman Organisasi
                     </h3>
                     <div className="space-y-4">
                         {organizationData.map((org) => (

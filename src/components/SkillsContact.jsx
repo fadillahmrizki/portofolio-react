@@ -18,7 +18,7 @@ export default function SkillsContact() {
                 {/* Data & Analytics Skills */}
                 <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 hover:-translate-y-1 hover:shadow-md transition-all duration-200">
                     <h3 className="font-bold text-sm text-slate-900 dark:text-white uppercase tracking-wider mb-4 pb-2 border-b border-slate-100 dark:border-slate-800 flex items-center gap-2">
-                        <span>📊</span> Data & Analytics
+                        Data & Analytics
                     </h3>
                     <ul className="space-y-2.5 text-xs font-medium text-slate-700 dark:text-slate-300">
                         <li className="flex items-center justify-between">
@@ -31,11 +31,11 @@ export default function SkillsContact() {
                         </li>
                         <li className="flex items-center justify-between">
                             <span>Database Query</span>
-                            <span className="text-slate-400 dark:text-slate-500 text-[10px]">SQL / MySQL</span>
+                            <span className="text-slate-400 dark:text-slate-500 text-[10px]">MySQL</span>
                         </li>
                         <li className="flex items-center justify-between">
                             <span>Data Visualization</span>
-                            <span className="text-slate-400 dark:text-slate-500 text-[10px]">Seaborn / Tableau</span>
+                            <span className="text-slate-400 dark:text-slate-500 text-[10px]">Seaborn</span>
                         </li>
                     </ul>
                 </div>
@@ -43,7 +43,7 @@ export default function SkillsContact() {
                 {/* Web Development Skills */}
                 <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 hover:-translate-y-1 hover:shadow-md transition-all duration-200">
                     <h3 className="font-bold text-sm text-slate-900 dark:text-white uppercase tracking-wider mb-4 pb-2 border-b border-slate-100 dark:border-slate-800 flex items-center gap-2">
-                        <span>💻</span> Web Development
+                        Web Development
                     </h3>
                     <ul className="space-y-2.5 text-xs font-medium text-slate-700 dark:text-slate-300">
                         <li className="flex items-center justify-between">
@@ -69,7 +69,7 @@ export default function SkillsContact() {
                 <div id="kontak" className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between hover:-translate-y-1 hover:shadow-md transition-all duration-200">
                     <div>
                         <h3 className="font-bold text-sm text-slate-900 dark:text-white uppercase tracking-wider mb-2 pb-2 border-b border-slate-100 dark:border-slate-800 flex items-center gap-2">
-                            <span>🤝</span> Hubungi Saya
+                             Hubungi Saya
                         </h3>
                         <p className="text-xs text-slate-500 dark:text-slate-400 mb-4">
                             Terbuka untuk diskusi proyek, kolaborasi, atau posisi kesempatan magang.
