@@ -67,7 +67,7 @@ export default function Navbar() {
             {/* Brand Logo & Nama */}
             <a href="#" className="font-bold text-slate-900 dark:text-white text-base md:text-lg tracking-tight flex items-center gap-2.5">
               <span className="w-8 h-8 rounded-xl bg-[#0080FF] text-white flex items-center justify-center font-extrabold text-xs shadow-sm">RF</span>
-              <span>My Portofolio</span>
+              <span>Rizky Fadillah</span>
             </a>
 
             {/* Menu Desktop */}
