@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Certificates() {
+    const { t } = useLanguage();
     const [selectedCert, setSelectedCert] = useState(null);
 
     const certificatesData = [
@@ -124,15 +126,14 @@ export default function Certificates() {
             type: 'link',
             url: 'https://www.dicoding.com/elevate/certificates/PRECGCXY9R',
         },
-
     ];
 
     return (
         <section id="sertifikat" className="space-y-6 pt-4">
-            {/* JUDUL BAGIAN SERTIFIKAT (Rata Tengah & Font Lebih Besar) */}
+            {/* JUDUL BAGIAN SERTIFIKAT */}
             <div className="text-center">
                 <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-                    Prestasi & Sertifikat
+                    {t.certs.title}
                 </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -168,7 +169,7 @@ export default function Certificates() {
                                 onClick={() => setSelectedCert(item)}
                                 className="shrink-0 px-3 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-900 dark:hover:bg-slate-700 hover:text-white text-slate-800 dark:text-slate-200 text-xs font-semibold rounded-lg border border-slate-200 dark:border-slate-700 transition flex items-center gap-1 cursor-pointer"
                             >
-                                <span>Lihat Sertifikat</span>
+                                <span>{t.certs.viewCert}</span>
                             </button>
                         ) : (
                             <a
@@ -177,7 +178,7 @@ export default function Certificates() {
                                 rel="noopener noreferrer"
                                 className="shrink-0 px-3 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-900 dark:hover:bg-slate-700 hover:text-white text-slate-800 dark:text-slate-200 text-xs font-semibold rounded-lg border border-slate-200 dark:border-slate-700 transition flex items-center gap-1"
                             >
-                                <span>Lihat Sertifikat</span>
+                                <span>{t.certs.viewCert}</span>
                                 <span>↗</span>
                             </a>
                         )}

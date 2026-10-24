@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function SkillsContact() {
+    const { t } = useLanguage();
     const [copied, setCopied] = useState(false);
     const email = "fadillahmrizki60@gmail.com";
 
-    // Function to copy email address to clipboard
+    // Fungsi untuk menyalin alamat email ke clipboard
     const handleCopyEmail = () => {
         navigator.clipboard.writeText(email).then(() => {
             setCopied(true);
@@ -18,7 +20,7 @@ export default function SkillsContact() {
                 {/* Data & Analytics Skills */}
                 <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 hover:-translate-y-1 hover:shadow-md transition-all duration-200">
                     <h3 className="font-bold text-sm text-slate-900 dark:text-white uppercase tracking-wider mb-4 pb-2 border-b border-slate-100 dark:border-slate-800 flex items-center gap-2">
-                        Data & Analytics
+                        {t.skills.dataTitle}
                     </h3>
                     <ul className="space-y-2.5 text-xs font-medium text-slate-700 dark:text-slate-300">
                         <li className="flex items-center justify-between">
@@ -43,12 +45,12 @@ export default function SkillsContact() {
                 {/* Web Development Skills */}
                 <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 hover:-translate-y-1 hover:shadow-md transition-all duration-200">
                     <h3 className="font-bold text-sm text-slate-900 dark:text-white uppercase tracking-wider mb-4 pb-2 border-b border-slate-100 dark:border-slate-800 flex items-center gap-2">
-                        Web Development
+                        {t.skills.webTitle}
                     </h3>
                     <ul className="space-y-2.5 text-xs font-medium text-slate-700 dark:text-slate-300">
                         <li className="flex items-center justify-between">
                             <span>Frontend Structure</span>
-                            <span className="text-slate-400 dark:text-slate-500 text-[10px]">HTML5 / Semantic</span>
+                            <span className="text-slate-400 dark:text-slate-500 text-[10px]">HTML5</span>
                         </li>
                         <li className="flex items-center justify-between">
                             <span>CSS Styling Framework</span>
@@ -69,10 +71,10 @@ export default function SkillsContact() {
                 <div id="kontak" className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between hover:-translate-y-1 hover:shadow-md transition-all duration-200">
                     <div>
                         <h3 className="font-bold text-sm text-slate-900 dark:text-white uppercase tracking-wider mb-2 pb-2 border-b border-slate-100 dark:border-slate-800 flex items-center gap-2">
-                             Hubungi Saya
+                            {t.skills.contactTitle}
                         </h3>
                         <p className="text-xs text-slate-500 dark:text-slate-400 mb-4">
-                            Terbuka untuk diskusi proyek, kolaborasi, atau posisi kesempatan magang.
+                            {t.skills.contactSubtitle}
                         </p>
 
                         <div className="space-y-2">
@@ -87,7 +89,7 @@ export default function SkillsContact() {
                                             : 'bg-white dark:bg-slate-900 border-slate-300 dark:border-slate-700'
                                         }`}
                                 >
-                                    {copied ? 'Copied! ✓' : 'Copy'}
+                                    {copied ? t.skills.copied : t.skills.copy}
                                 </span>
                             </button>
                         </div>
@@ -115,8 +117,8 @@ export default function SkillsContact() {
             </section>
 
             {/* Footer */}
-            <footer class="text-center py-6 border-t border-slate-200 dark:border-slate-800 text-xs text-slate-400 dark:text-slate-500 mt-12">
-                &copy; 2026 RF CV Web 1.0
+            <footer className="text-center py-6 border-t border-slate-200 dark:border-slate-800 text-xs text-slate-400 dark:text-slate-500 mt-12">
+                {t.skills.footer}
             </footer>
         </>
     );

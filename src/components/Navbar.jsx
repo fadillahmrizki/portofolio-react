@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Navbar() {
+  const { lang, toggleLanguage, t } = useLanguage();
   const [isDark, setIsDark] = useState(() => {
     return localStorage.theme === 'dark' ||
       (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
@@ -25,7 +27,7 @@ export default function Navbar() {
       opacity: 0,
       transition: {
         duration: 0.2,
-        when: "afterChildren", // Menunggu item anak hilang dulu saat ditutup
+        when: "afterChildren",
       }
     },
     visible: {
@@ -34,8 +36,8 @@ export default function Navbar() {
       transition: {
         duration: 0.3,
         ease: "easeOut",
-        when: "beforeChildren", // Buka kontainer dulu baru munculkan anak
-        staggerChildren: 0.06,  // Jeda waktu antar teks link
+        when: "beforeChildren",
+        staggerChildren: 0.06,
       }
     }
   };
@@ -51,10 +53,10 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { href: "#proyek", label: "Proyek Unggulan" },
-    { href: "#sertifikat", label: "Sertifikat & Prestasi" },
-    { href: "#riwayat", label: "Riwayat & Organisasi" },
-    { href: "#keahlian", label: "Keahlian" },
+    { href: "#proyek", label: t.nav.proyek },
+    { href: "#sertifikat", label: t.nav.sertifikat },
+    { href: "#riwayat", label: t.nav.riwayat },
+    { href: "#keahlian", label: t.nav.keahlian },
   ];
 
   return (
@@ -71,18 +73,50 @@ export default function Navbar() {
             </a>
 
             {/* Menu Desktop */}
-            <div className="hidden md:flex items-center gap-7 text-xs md:text-sm font-semibold text-slate-700 dark:text-slate-200">
-              <a href="#proyek" className="hover:text-slate-900 dark:hover:text-white transition py-1">Proyek Unggulan</a>
-              <a href="#sertifikat" className="hover:text-slate-900 dark:hover:text-white transition py-1">Sertifikat & Prestasi</a>
-              <a href="#riwayat" className="hover:text-slate-900 dark:hover:text-white transition py-1">Riwayat & Organisasi</a>
-              <a href="#keahlian" className="hover:text-slate-900 dark:hover:text-white transition py-1">Keahlian</a>
-              <a href="#kontak" className="px-4 py-2 bg-[#0080FF] text-white hover:bg-[#0066cc] rounded-xl transition shadow-sm font-semibold text-xs md:text-sm">
-                Hubungi Saya
+            <div className="hidden md:flex items-center gap-6 text-xs md:text-sm font-semibold text-slate-700 dark:text-slate-200">
+              <a href="#proyek" className="hover:text-slate-900 dark:hover:text-white transition py-1">
+                {t.nav.proyek}
               </a>
+              <a href="#sertifikat" className="hover:text-slate-900 dark:hover:text-white transition py-1">
+                {t.nav.sertifikat}
+              </a>
+              <a href="#riwayat" className="hover:text-slate-900 dark:hover:text-white transition py-1">
+                {t.nav.riwayat}
+              </a>
+              <a href="#keahlian" className="hover:text-slate-900 dark:hover:text-white transition py-1">
+                {t.nav.keahlian}
+              </a>
+
+              {/* Tombol Hubungi Saya */}
+              <a
+                href="#kontak"
+                className="px-4 py-2 bg-[#0080FF] text-white hover:bg-[#0066cc] rounded-xl transition shadow-sm font-semibold text-xs md:text-sm"
+              >
+                {t.nav.kontak}
+              </a>
+
+              {/* TOMBOL TRANSLATE (Di Hujung Paling Kanan) */}
+              <button
+                onClick={toggleLanguage}
+                className="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 transition flex items-center gap-1.5 cursor-pointer active:scale-95"
+                title="Tukar Bahasa / Switch Language"
+              >
+                <span>{lang === 'id' ? '🇮🇩 ID' : '🇬🇧 EN'}</span>
+              </button>
             </div>
 
-            {/* Tombol Hamburger Mobile */}
+            {/* Tombol Mobile (Hamburger & Translate Mobile) */}
             <div className="flex items-center gap-2 md:hidden">
+              {/* Tombol Translate Mobile */}
+              <button
+                onClick={toggleLanguage}
+                className="px-2.5 py-1.5 bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 active:scale-95 cursor-pointer"
+                title="Tukar Bahasa"
+              >
+                {lang === 'id' ? '🇮🇩 ID' : '🇬🇧 EN'}
+              </button>
+
+              {/* Tombol Hamburger */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 transition focus:outline-none border border-slate-200 dark:border-slate-700 active:scale-95 cursor-pointer"
@@ -120,14 +154,14 @@ export default function Navbar() {
                     {link.label}
                   </motion.a>
                 ))}
-                
+
                 <motion.a
                   variants={itemVariants}
                   href="#kontak"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="block py-2 text-[#0080FF] font-bold"
                 >
-                  Hubungi Saya ↗
+                  {t.nav.kontak} ↗
                 </motion.a>
               </motion.div>
             )}
